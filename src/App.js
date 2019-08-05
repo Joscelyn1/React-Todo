@@ -66,7 +66,7 @@ class App extends React.Component {
       completed: false
     };
     this.setState({
-      toDoData: [...this.state.toDos, newItem]
+      toDos: [...this.state.toDos, newItem]
     });
   };
 
