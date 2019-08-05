@@ -44,23 +44,16 @@ class App extends React.Component {
   }
 
   toggleItem = id => {
-    // Update groceries on our state object
-    // use this.setState
-    // loop through the arr
-    // find which element we clicked update the "pruchased" property
     this.setState({
-      groceries: this.state.toDos.map(item => {
-        if (item.id === id) {
+      toDos: this.state.toDos.map(toDo => {
+        if (toDo.id === id) {
           return {
-            ...item,
-            // Same as:
-            // name: item.name,
-            // id: item.id,
-            // purchased: item.purchased,
-            completed: !item.completed
+            ...toDo,
+
+            completed: !toDo.completed
           };
         } else {
-          return item;
+          return toDo;
         }
       })
     });
