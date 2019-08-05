@@ -1,4 +1,6 @@
 import React from "react";
+import TodoList from "./components/TodoComponents/TodoList.js";
+import TodoForm from "./components/TodoComponents/TodoForm";
 
 const toDoData = [
   {
@@ -86,8 +88,12 @@ class App extends React.Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className="App">
+        <div className="header">
+          <h1>To-Do List</h1>
+          <TodoForm addItem={this.addItem} />
+        </div>
+        <TodoList toDos={this.state.toDos} toggleItem={this.toggleItem} />
       </div>
     );
   }
