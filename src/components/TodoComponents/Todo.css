@@ -34,3 +34,7 @@ button {
 input {
   border-radius: 25px;
 }
+
+.search {
+  margin: 20px;
+}
